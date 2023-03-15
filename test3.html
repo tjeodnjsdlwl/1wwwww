@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+
+    <style>
+       header{
+        position: relative;
+        height: 200px;
+        background: #ccc;
+       }
+       header h1{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        /* old */
+        /* margin-top: -25px;
+        margin-left: -50px; */
+        transform: translate(-50%, -50%);
+       }
+       header h1 a{
+        display: block;
+        width: 100px;
+        height: 50px;
+        background: #f00;
+       }
+
+       header .sns{
+        position: absolute;
+        top: 0;left: 0;
+       }
+       header .login{
+        position: absolute;
+        top: 0;right: 0;
+       }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1><a href="">네이버</a></h1>
+        <div class="sns">sns</div>
+        <div class="login">login</div>
+    </header>
+    <main>
+
+        <style>
+            /* 
+               [ 또로복권]
+                float
+                flex
+                abolute
+                fixed
+            */
+
+            .box1{
+                position: relative;
+                height: 300px;
+                background: #888;
+            }
+
+            .box1 .btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+                width: 50px;
+                height: 50px;
+                background: #fff;
+            }
+            .box1 .btn.prev{left: 10px;}
+            .box1 .btn.next{right: 10px;}
+
+            .box1 .pagination{
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .box1 .pagination span{
+                float: left;
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                margin: 0 5px;
+                border-radius: 50%;
+            }
+            .box1 .pagination .active{
+                background: #f00;
+            }
+        </style>
+
+
+        <section class="box1">
+            <a href="" class="btn prev">prev</a>
+            <a href="" class="btn next">next</a>
+            <div class="pagination">
+                <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+            </div>
+        </section>
+
+
+        <style>
+            .box2{
+                padding: 100px 0;
+            }
+            .box2 h2{
+                text-align: center;
+                font-size: 50px;
+                font-weight: bold;
+                margin-bottom: 100px;
+            }
+
+            .box2 ul{
+                width: 800px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .box2 ul li{
+                float: left;
+                width: calc((100% - 20px)/3);
+                margin-right: 10px;
+            }
+            .box2 ul li:last-child{
+                margin-right: 0;
+            }
+            
+            .box2 ul a{ 
+                display: block;
+                padding: 10px;
+                background: #00f;
+            }
+            .box2 ul img{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .box2 ul p{
+                padding: 10px;
+                background: #fff;
+                margin-top: 10px;
+            }
+        </style>
+
+        <section class="box2">
+            <h2>이벤트</h2>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img2.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img3.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <style>
+            .box3{
+                background: #ccc;
+                padding: 100px 0;
+            }
+            .box3 ul{
+                width: 800px;
+                margin: 0 auto;
+            }
+            .box3 ul li{
+                height: 100px;
+                background: #fff;
+            }
+            .box3 ul li+li{
+                margin-top: 10px;
+            }
+
+            footer{
+                height: 200px;
+                background: #f00;
+            }
+        </style>
+
+        <section class="box3">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        footer
+    </footer>
+
+
+
+</body>
+</html>

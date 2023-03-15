@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background: #ccc;
+        }
+        header{
+            position: fixed;
+            top: 0;left: 0;
+            width: 150px;
+            height: 100%;
+            background: #f00;
+        }
+        main{
+            /* margin-left: 160px;
+            margin-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px; */
+            margin: 10px 10px 10px 160px;
+        }
+        /* 올빼미선택자 */
+        main > * + *{
+            margin-top: 10px;
+        }
+        .box1,
+        .box3,
+        .box4,
+        .box7{
+            height: 200px;
+            background: #fff;
+        }
+
+        .box2{
+            overflow: hidden;
+        }
+        .box2 div{
+            float: left;
+            width: calc(50% - 5px);
+            height: 100px;
+            background: #fff;
+        }
+        .box2 div:last-child{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <div class="box1">box</div>
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="box3">box</div>
+        <div class="box4">box</div>
+
+
+        <style>
+            .box5{
+                overflow: hidden;
+            }
+            .box5 div{
+                float: left;
+                height: 100px;
+                background: #fff;
+                width: calc(80% - 5px);
+            }
+            .box5 div:last-child{
+                float: right;
+                width: calc(20% - 5px);
+            }
+            .box6{
+                overflow: hidden;
+            }
+            .box6 div{
+                float: left;
+                height: 100px;
+                background: #fff;
+                width: calc(30% - 5px);
+            }
+            .box6 div:last-child{
+                float: right;
+                width: calc(70% - 5px);
+            }
+            /* 
+                css 점수
+                태그 1
+                클레스 10
+                가상요소 10
+                아이디  100
+
+            */
+        </style>
+
+        <div class="box5">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="box6">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <div class="box7">box</div>
+    </main>
+</body>
+</html>

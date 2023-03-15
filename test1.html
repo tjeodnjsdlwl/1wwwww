@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* bg#ccc */
+            background: #ccc;
+        }
+        header{
+            height: 100px;
+            background: #000;
+        }
+        main{
+            width: 800px;
+            margin: 10px auto;
+        }
+        .box1{
+            background: #fff;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+        /* 
+            float: 해제
+            1. 부모요소에 oh
+            2. 마지막요소에 clear:both
+            3. 부모의 가상(after) clear:both
+        */
+        .box2{
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .box2 div{
+            float: left;
+            width: calc((100% - 20px)/3);
+            height: 200px;
+            background: #fff;
+            margin-right: 10px;
+        }
+        .box2 div:last-child{
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        header
+     </header>
+     <main>
+        <div class="box1">box</div>
+        <div class="box2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <style>
+            .box3{margin-bottom: 10px;}
+            .box3 .item{
+                float: left;
+                width: calc((100% - 40px)/5);
+                height: 200px;
+                background: #fff;
+                margin-right: 10px;
+            }
+            .box3 .item.last{
+                margin-right: 0;
+            }
+            .box3 .clear{
+                clear: both;
+            }
+        </style>
+
+        <div class="box3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item last">5</div>
+            <div class="clear"></div>
+        </div>
+
+        <style>
+            .box4{
+                padding: 10px;
+                background: #000;
+            }
+            .box4 div{
+                float: left;
+                width: calc(50% - 5px);
+                height: 100px;
+                background: #fff;
+            }
+            .box4 div:last-child{
+                float: right;
+            }
+            .box4::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+
+        <div class="box4">
+            <!-- after -->
+            <div>1</div>
+            <div>2</div>
+            <!-- after -->
+        </div>
+        11111
+        <!-- ??x -->
+     </main>
+</body>
+</html>

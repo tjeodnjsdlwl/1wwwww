@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+</head>
+<body>
+
+    <style>
+        header{}
+        header .top{
+            position: relative;
+            height: 200px;
+            background: #888;
+        }
+
+        header h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        header h1 a{
+            display: block;
+            width: 100px;
+            height: 50px;
+            background: #f00;
+        }
+        
+        header .sns{float: left;}
+        header .login{float: right;}
+
+        /*  */
+        .gnb{
+            background: #ccc;
+            text-align: center;
+        }
+        .gnb ul{
+            display: inline-block;
+            overflow: hidden;
+            background: #f00;
+            vertical-align: top;
+            line-height: 50px;
+        }
+        .gnb ul li{
+            float: left;
+            padding: 0 10px;
+        }
+        .gnb ul a{}
+    </style>
+
+    <header>
+        <div class="top">
+            <h1><a href="">logo</a></h1>
+            <div class="sns">@</div>
+            <div class="login">#</div>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">menu1</a></li>
+                <li><a href="">menu2</a></li>
+                <li><a href="">menu3</a></li>
+                <li><a href="">menu4</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        main{
+            width: 800px;
+            margin: 10px auto;
+        }
+
+        .box1{
+            background: #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .box1 .top{
+            height: 100px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .box1 .bottom{
+            padding: 10px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .box1 .left{
+            float: left;
+            width: calc(100% - 160px);
+            /* background: #00f; */
+        }
+        .box1 .left li{
+            width: calc((100% - 20px) / 3);
+            float: left;
+            height: 100px;
+            background: #f00;
+            margin-right: 10px;
+        }
+        .box1 .left li:nth-child(3n){
+            margin-right: 0;
+        }
+        /* .box1 .left li:nth-child(-n+3){margin-bottom: 10px;} */
+        .box1 .left li:nth-child(n+4){margin-top: 10px;}
+        .box1 .right{
+            float: right;
+            width: 150px;
+            height: 210px;
+            background: #f00;
+        }
+    </style>
+
+    <main>
+        <section class="box1">
+            <div class="top">top</div>
+            <div class="bottom">
+                <ul class="left">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                </ul>
+                <div class="right">w150</div>
+            </div>
+        </section>
+
+
+        <style>
+            .box2{
+                padding: 10px;
+                background: #ccc;
+            }
+            .box2 ul{}
+            .box2 ul li{}
+            .box2 ul li+li{margin-top: 10px;}
+
+            .box2 ul a{
+                display: block;
+                overflow: hidden;
+            }
+            .box2 ul img{
+                float: left;
+                width: 150px;
+                height: 150px;
+                margin-right: 10px;
+            }
+            .box2 ul p{
+                background: #fff;
+                height: 150px;
+                overflow: hidden;
+            }
+
+            footer{
+                height: 200px;
+                background: #f00;
+            }
+        </style>
+
+        <section class="box2">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="./img1.jpg" alt="">
+                        <p>Lorem, ipsum dolor.</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>
